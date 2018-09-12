@@ -1,0 +1,5 @@
+chips::0.85::14
+candy::0.50::12
+crackers::1.50::14
+soda::1.00::10
+chocolate::0.75::12
