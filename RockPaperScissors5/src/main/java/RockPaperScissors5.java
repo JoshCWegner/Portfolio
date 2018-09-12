@@ -47,16 +47,9 @@ public class RockPaperScissors5 {
 
             Random random = new Random();
 
-            System.out.println("Enter in an amount of money you want to bet on Rock, Paper, Scissors");
-            stringUserEnterMoneyWageredOnGame = scanner.nextLine();
-            userEnterMoneyWageredOnGame = Double.parseDouble(stringUserEnterMoneyWageredOnGame);
-
             System.out.println("Enter a number from 1-10 for how many rounds of rock, paper, scissors you want to play.");
             stringUserInputNumberOfRoundsToPlay = scanner.nextLine();
             userInputNumberOfRoundsToPlay = Integer.parseInt(stringUserInputNumberOfRoundsToPlay);
-
-            System.out.println("You bet $" + userEnterMoneyWageredOnGame + " on " + stringUserInputNumberOfRoundsToPlay
-                    + " of Rock, Paper, Scissors ===GOOD LUCK===");
 
             System.out.println("You want to play " + userInputNumberOfRoundsToPlay + " rounds of rock, paper, scissors.");
 
@@ -107,21 +100,12 @@ public class RockPaperScissors5 {
             if (userNumberOfWins > computerNumberOfWins) {
                 moneyWonOnAGame = (userEnterMoneyWageredOnGame * 2);
                 System.out.println("The user had " + userNumberOfWins + " wins, " + userNumberOfLosses + " losses and " + userNumberOfTies + " ties.");
-                System.out.println("You have won $" + moneyWonOnAGame + " while playing " + userInputNumberOfRoundsToPlay + " of Rock, Paper, Scissors");
-                currentAccountBalance = moneyWonOnAGame + userEnterInDollorAmountIntoAccount;
-                System.out.println("Your ===CURRENT ACCOUNT BALANCE=== is $" + currentAccountBalance);
             } else if (computerNumberOfWins > userNumberOfWins) {
                 moneyWonOnAGame = (userEnterMoneyWageredOnGame * 0);
                 System.out.println("The computer had " + computerNumberOfWins + " wins, " + computerNumberOfLosses + " losses and " + computerNumberOfTies + " ties.");
-                System.out.println("You have won $" + moneyWonOnAGame + " while playing " + userInputNumberOfRoundsToPlay + " of Rock, Paper, Scissors");
-                currentAccountBalance = moneyWonOnAGame + userEnterInDollorAmountIntoAccount;
-                System.out.println("Your ===CURRENT ACCOUNT BALANCE=== is $" + currentAccountBalance);
             } else if (userNumberOfTies == numberOfTies) {
                 moneyWonOnAGame = (userEnterMoneyWageredOnGame * 1);
                 System.out.println("They tied in " + numberOfTies + " ties in " + userInputNumberOfRoundsToPlay + " rounds.");
-                System.out.println("You have won $" + moneyWonOnAGame + " while playing " + userInputNumberOfRoundsToPlay + " of Rock, Paper, Scissors");
-                currentAccountBalance = moneyWonOnAGame + userEnterInDollorAmountIntoAccount;
-                System.out.println("Your ===CURRENT ACCOUNT BALANCE=== is $" + currentAccountBalance);
             }
 
             System.out.println("Do you want to play another game? yes / no");
